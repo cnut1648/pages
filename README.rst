@@ -6,6 +6,7 @@ Sphinx to GitHub Pages V2
    :target: https://github.com/sphinx-notes/pages
 
 Help you deploying your Sphinx documentation to Github Pages.
+Specifically, this fork repo won't delete everything after the sphinx artifacts are generated. Therefore it will be handy if you have something in your code that needed to be referred even after sphinx is done.
 
 Usage
 =====

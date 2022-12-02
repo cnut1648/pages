@@ -93,11 +93,6 @@ if [ ! -f "$INPUT_TARGET_PATH/.nojekyll" ]; then
     touch "$INPUT_TARGET_PATH/.nojekyll"
 fi
 
-echo ::group:: Echo Debug
-echo $( ls $tmp_dir/_static )
-echo $( ls $repo_dir/_static )
-echo ::endgroup::
-
 echo Adding HTML documentation to repository index
 git add $INPUT_TARGET_PATH
 echo Recording changes to repository
