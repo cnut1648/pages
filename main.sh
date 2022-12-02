@@ -61,6 +61,13 @@ if ! sphinx-build -b html "$doc_dir" "$tmp_dir" $INPUT_SPHINX_OPTIONS; then
 fi
 echo ::endgroup::
 
+echo ::group:: Echo Debugging Info (v1)
+echo "tmp_dir"
+echo $( ls $tmp_dir )
+echo "repo_dir"
+echo $( ls $repo_dir )
+echo ::endgroup::
+
 echo ::group:: Setting up git repository
 echo Setting up git configure
 cd $repo_dir
