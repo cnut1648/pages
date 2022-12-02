@@ -53,7 +53,7 @@ echo ::endgroup::
 echo ::group:: Running Sphinx builder
 if ! sphinx-build -b html "$doc_dir" "$tmp_dir" $INPUT_SPHINX_OPTIONS; then
     echo ::endgroup::
-    echo ::group:: Dumping Sphinx error log 
+    echo ::group:: Dumping Sphinx error log
     for l in $(ls /tmp/sphinx-err*); do
         cat $l
     done
@@ -77,6 +77,13 @@ else
     git checkout --force $INPUT_TARGET_BRANCH
 fi
 # git clean -fd
+echo ::endgroup::
+
+echo ::group:: Echo Debugging Info
+echo "tmp_dir"
+echo $( ls $tmp_dir )
+echo "repo_dir"
+echo $( ls $repo_dir )
 echo ::endgroup::
 
 echo ::group:: Committing HTML documentation
