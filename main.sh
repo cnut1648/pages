@@ -61,7 +61,7 @@ if ! sphinx-build -b html "$doc_dir" "$tmp_dir" $INPUT_SPHINX_OPTIONS; then
 fi
 echo ::endgroup::
 
-echo ::group:: Echo Debugging Info (v1)
+echo ::group:: Echo Debugging Info
 echo "tmp_dir"
 echo $( ls $tmp_dir )
 echo "repo_dir"
