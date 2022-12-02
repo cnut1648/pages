@@ -76,7 +76,7 @@ else
     echo Branch exists, checkout to it
     git checkout --force $INPUT_TARGET_BRANCH
 fi
-git clean -fd
+# git clean -fd
 echo ::endgroup::
 
 echo ::group:: Committing HTML documentation
@@ -85,8 +85,8 @@ cd $repo_dir
 # rm -vrf *
 echo Copying HTML documentation to repository
 # Remove unused doctree
-rm -rf $tmp_dir/.doctrees
-cp -vr $tmp_dir/. $INPUT_TARGET_PATH
+# rm -rf $tmp_dir/.doctrees
+# cp -vr $tmp_dir/. $INPUT_TARGET_PATH
 if [ ! -f "$INPUT_TARGET_PATH/.nojekyll" ]; then
     # See also sphinxnotes/pages#7
     echo Creating .nojekyll file
