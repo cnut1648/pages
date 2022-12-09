@@ -12,17 +12,6 @@ echo Repository: $repo_dir
 echo Documentation: $doc_dir
 echo ::endgroup::
 
-# The actions doesn't depends on any images,
-# so we have to try various package manager.
-echo ::group:: Installing Sphinx
-
-echo Installing sphinx via pip
-if [ -z "$INPUT_SPHINX_VERSION" ] ; then
-    pip3 install -U sphinx
-else
-    pip3 install -U sphinx==$INPUT_SPHINX_VERSION
-fi
-
 echo Adding user bin to system path
 PATH=$HOME/.local/bin:$PATH
 if ! command -v sphinx-build &>/dev/null; then
