@@ -23,17 +23,6 @@ fi
 
 echo ::endgroup::
 
-if [ ! -z "$INPUT_REQUIREMENTS_PATH" ] ; then
-    echo ::group:: Installing requirements
-    if [ -f "$repo_dir/$INPUT_REQUIREMENTS_PATH" ]; then
-        echo Installing python requirements
-        pip3 install -r "$repo_dir/$INPUT_REQUIREMENTS_PATH"
-    else
-        echo No requirements.txt found, skipped
-    fi
-    echo ::endgroup::
-fi
-
 echo ::group:: Creating temp directory
 tmp_dir=$(mktemp -d -t pages-XXXXXXXXXX)
 echo Temp directory \"$tmp_dir\" is created
