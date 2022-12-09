@@ -41,9 +41,11 @@ echo ::endgroup::
 
 echo ::group:: Setting up git repository
 echo Setting up git configure
+echo $repo_dir
 cd $repo_dir
-git config --local user.email "action@github.com"
-git config --local user.name "GitHub Action"
+ls .
+# git config --local user.email "action@github.com"
+# git config --local user.name "GitHub Action"
 git stash
 echo Setting up branch $INPUT_TARGET_BRANCH
 branch_exist=$(git ls-remote --heads origin refs/heads/$INPUT_TARGET_BRANCH)
