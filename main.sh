@@ -44,8 +44,8 @@ echo Setting up git configure
 echo $repo_dir
 cd $repo_dir
 ls .
-# git config --local user.email "action@github.com"
-# git config --local user.name "GitHub Action"
+git config --global user.email "action@github.com"
+git config --global user.name "GitHub Action"
 git config --global --add safe.directory /__w/team01/team01
 git stash
 echo Setting up branch $INPUT_TARGET_BRANCH
