@@ -46,6 +46,7 @@ cd $repo_dir
 ls .
 # git config --local user.email "action@github.com"
 # git config --local user.name "GitHub Action"
+git config --global --add safe.directory /__w/team01/team01
 git stash
 echo Setting up branch $INPUT_TARGET_BRANCH
 branch_exist=$(git ls-remote --heads origin refs/heads/$INPUT_TARGET_BRANCH)
